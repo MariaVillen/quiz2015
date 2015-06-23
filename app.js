@@ -4,8 +4,8 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-//importa el enrutador
-var routes = require('./routes/index');
+var routes = require('./routes/index');//importa el enrutador (chapter 6.5)
+var partials = require('express-partials'); //agregamos express partials para vistas parciales (chapter 6.6)
 
 var app = express();
 
@@ -20,6 +20,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(partials());//agregado en chapter 6.6
 
 //instala el enrutador
 app.use('/', routes);
