@@ -1,0 +1,16 @@
+EJECUTAR PROGRAMA
+
+cd quiz
+npm install
+node bin/www
+npm start
+
+
+GITHUB
+
+$git commit -a --m "Mi primera pregunta"
+añadimos version y comentamos al mismo tiempo
+$git log --oneline 
+vemos las versiones generadas
+git commit --amend modifica la version anterior
+
