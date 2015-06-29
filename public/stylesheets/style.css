@@ -1,13 +1,68 @@
 * { 
 	margin:0;
-	padding:0; 
+	padding:0;
+	box-sizing: border-box; 
 }
 
-body { font:16px Georgia, serif; }
+html { height: 100%;
+	   width: 100%;
+}
+
+body {
+	height: 99.9%;
+	width: 99.9%;
+	font:16px "Roboto", arial, sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: #666;
+}
+
+
+section > div {padding: 20px;}
+
+
+header, nav, section, footer {
+	background: #eee;
+	text-align: center;
+}
+
+header {display: table;
+width: 100%;
+vertical-align: middle;
+text-align: center;}
+
+section {
+height: 60%;}
+
+footer {
+	height: 19%;
+	min-height: 60px;
+	text-align: right;
+}
+
+footer a {
+	margin-right: 3em;
+}
+
+footer a:hover{
+	text-decoration: underline;
+}
+
+nav span {
+	margin: 0px 10px 0px 0px;
+}
+
 
 #page-wrap	{ 
-	margin: 2% auto;
+	padding: 5px;
+	margin: 0 auto;
 	color: white;
+	height: 99.9%;
+	width: 99.9%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #page-wrap > .main {
@@ -15,15 +70,185 @@ body { font:16px Georgia, serif; }
 	padding: 1%;
 	margin-bottom: 1px;
 	color: black;
+
 }
 
-section > div {padding: 20px;}
+.pannel-container{
+	padding: 5px;
+	margin: 0 auto;
+	height: 100%;
+	width: 100%;
+	}
 
-header, nav, section, footer {
-	background: #eee;
+.link-default {
+	margin: 1px;
+}
+
+.link-default a{
+	font-size: large;
+	width: 100%;
+	padding: 5px;
+	color: black;
+	line-height: 200%;
+}
+
+.link-default a:hover {
+color: #666;
+}
+
+.link-light {
+	line-height: 110%;
+	font-size: large;
+	border: 1px solid #666;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.left {
+	float:left;
+}
+.right {
+	float: right;
+}
+/*TITULOS*/
+.title {padding: 5%;
+		font-size: 1.5rem;
+		display: block;}
+
+.title-big {
+	padding:0;
+	font-size: 2rem;
+	line-height: 200%;
+}
+
+.titleGigant {
+	margin-bottom: 2%;
+	font-size: 250%;
+}
+
+.spanBlock {
+	display: block;
+	padding: 5%;
+	color: rgb(100,100,100);
+}
+
+.header-title{
+	width: 100%;
+	display: table-cell;
 	text-align: center;
+	vertical-align: middle;
+	max-height: 100%;
 }
 
-nav span {
-	margin: 0px 10px 0px 0px;
+.marco {
+	display: inline-block;
+	margin:0 auto;
+	padding: 5rem;
+	border-radius:50%;
+	border: 10px solid rgb(198,100,100);
+	background: transparent url("../images/foto.jpeg") no-repeat scroll 0% 0%;
+	background-size: cover;
+}
+
+.pannel {
+	display: table;
+	padding: 1em;
+	width: 100%;
+	height: 100%;
+}
+
+.pannel > div {
+	display:table-cell;
+	vertical-align: middle;
+}
+
+.iframe-pannel {
+	  position: relative;
+	  padding-bottom: 56.25%;
+	  overflow: hidden;
+}
+
+.iframe-responsive {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;}
+
+
+.twoPannels div.pannel {
+	width: 50%;
+}
+
+
+#preguntas form > p {
+	font-size: 250%;
+}
+#preguntas form > input {
+	font-size: 200%;
+	margin-top: 5%;
+}
+
+#milogo {
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 3%;
+	width: 10em;
+	height: 10em;
+	background: transparent url("../images/LogoQuiz.png") no-repeat scroll 0% 0% /cover;
+}
+
+::-webkit-input-placeholder {
+   text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   text-align: center;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   text-align: center;  
+}
+
+:-ms-input-placeholder {  
+   text-align: center; 
+}
+
+
+@-webkit-keyframes hvr-pulse-shrink {
+  to {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+@keyframes hvr-pulse-shrink {
+  to {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+.hvr-pulse-shrink {
+	display: inline-block;
+  	vertical-align: middle;
+  	-webkit-transform: translateZ(0);
+  	transform: translateZ(0);
+  	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  	-webkit-backface-visibility: hidden;
+  	backface-visibility: hidden;
+  	-moz-osx-font-smoothing: grayscale;
+}
+
+.hvr-pulse-shrink:hover, .hvr-pulse-shrink:focus, .hvr-pulse-shrink:active {
+ 	-webkit-animation-name: hvr-pulse-shrink;
+  	animation-name: hvr-pulse-shrink;
+  	-webkit-animation-duration: 0.3s;
+  	animation-duration: 0.3s;
+  	-webkit-animation-timing-function: linear;
+  	animation-timing-function: linear;
+  	-webkit-animation-iteration-count: infinite;
+  	animation-iteration-count: infinite;
+  	-webkit-animation-direction: alternate;
+  	animation-direction: alternate;
 }

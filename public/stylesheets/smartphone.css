@@ -1,21 +1,98 @@
 /*smartphone css*/
+html, body {height: auto;}
 
 body {
+	font-size: x-large; 
 	background: #333;
+	min-width: 320px;
 }
 
-#page-wrap:after {
-	content: "Smartphone Layout";
-}
 
 h2 span, section h3 {
 	display: none;
 }
 
-body {
-	font-size: xx-large; 
+header {min-height: 10%;}
+
+nav {min-height: 10%;}
+
+section {
+	height: 70%;
 }
 
-footer, input {
+footer {
+	display: fixed;
+	bottom: 0px;
+	height: 10%;
+	text-align: center;
+}
+
+footer a {
+	font-size: 15px;
+	margin-right: 1em;
+}
+
+input {
 	font-size: large;
 }
+
+
+.pannel {
+	padding:0;
+	padding-bottom: 2em;
+}
+
+.pannel > div {
+	margin: auto 0;
+}
+
+.pannel-container {
+	height: auto;
+}
+
+.twoPannels div.pannel {
+	width: 100%;
+	min-height: 300px;
+}
+
+.iframe-pannel {
+	padding-top: 4rem;
+}
+
+.comment {
+	font-size: 16px;
+}
+
+.titleGigant {
+	margin-bottom: 10%;
+	font-size: 1em;
+}
+
+.left {
+	float:none;
+}
+.right {
+	float:none;
+}
+
+#preguntas form > p {
+	font-size: 1em;
+	margin: 1em auto;
+}
+
+#respuestas p {
+	margin: 1em auto;
+}
+
+#preguntas form > input {
+	font-size: 0.7em;
+	margin-top: 1em;
+}
+
+#milogo {
+width: 5em;
+height: 5em;
+margin-top: 1em;
+margin-bottom: 1em;
+}
+

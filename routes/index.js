@@ -7,14 +7,17 @@ var quizController = require('../controllers/quiz_controller.js');//Added in Cha
 
 
 /* GET home page. */
+
 router.get('/', function(req, res) {
-  res.render('index', { title: 'Quiz' });
+ 	res.render('index', { title: 'Quiz' });
 });
 
 
 router.get('/quizes/question', quizController.question);//Added in Chapter 6.5
 router.get('/quizes/answer', quizController.answer);//Added in Chapter 6.5
 
+router.get('/author', function(req, res){
+	res.render('author');});
 
 
 module.exports = router;

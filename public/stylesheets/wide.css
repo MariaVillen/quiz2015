@@ -1,30 +1,60 @@
 /*desktop*/
 
 body {
-	background: #999;
+	background: #999;	
 }
 
-#page-wrap:after {
-	content:"Wide Layout";
+header{
+	height: 15%;
+	min-height: 15%;
 }
 
 nav {
 	float:left;
-	width: 15%;
-	height: 200px;
+	width: 20%;
+	min-height: 380px;
+	height: 72%;
 }
 
 nav span {
 	margin: 0px 100px 0px 0px;
 }
 
+
 section {
 	float: right;
+	min-height: 380px;
 	width: 80%;
-	height: 200px;
+	height: 72%;
 }
 
 footer {
 	clear: both;
 	display: block;
+	height: 10%;
+}
+
+#page-wrap {
+	height: 99.9%;
+}
+
+#page-wrap:after {
+	content:"Wide Layout";
+}
+
+.link-default {
+	display: block;
+	background-color: #333;
+	border: 1px solid #222;
+}
+
+.link-default a { 
+	display:block;
+	font-size: normal;
+	color:white;
+}
+
+.link-default:hover {
+	background-color: #555;
+	border-color: #444;
 }

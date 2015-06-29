@@ -3,7 +3,9 @@
   <head>
    	<meta charset = "UTF-8">
     <title>Quiz</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,500,500italic,900' rel='stylesheet' type='text/css'>
     <link rel='icon' href='favicon.ico' type="image/x-icon" />
+ 
     <link rel='stylesheet' type='text/css' href='/stylesheets/style.css'/> 
     <link rel='stylesheet' 
           href='/stylesheets/wide.css' 
@@ -16,19 +18,23 @@
           media='only screen and (max-width: 480px)'
           type='text/css'
           />
-  
   </head>
  
   <body>
     <div id="page-wrap">
       
       <header class="main" id="h1">
-        <h2>Quiz <span>: el juego de las preguntas</span></h2>
+        <div class="header-title">
+          <h2 class="title title-big">QUIZ<span>: El juego de las preguntas</span></h2>
+        </div>
       </header>
       
       <nav class="main" id="n1" role="navigation">
-        <span><a href="/">Inicio</a></span>
-        <span><a href="/quizes/question">Preguntas</a></span>
+        <div class="menu">
+          <span class="link-default"><a href="/">Inicio</a></span>
+          <span class="link-default"><a href="/quizes/question">Preguntas</a></span>
+          <span class="link-default"><a href="/author">Créditos</a></span>
+        </div>
       </nav>
       
       <section class="main" id="s1">
@@ -41,5 +47,8 @@
       </footer>
 
     </div>
+
+ 
+   
   </body>
 </html>
