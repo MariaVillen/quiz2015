@@ -1,0 +1,3 @@
+quiz.sqlite
+.env
+node_modules/**/*
