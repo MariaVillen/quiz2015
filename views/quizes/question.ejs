@@ -1,7 +1,7 @@
 <div id="preguntas" class="pannel">
 	<div>
-		<form method="GET" action="/quizes/answer">
-		  <p class="titleGigant">Pregunta: <%= pregunta %></p>
+		<form method="GET" action="/quizes/<%=quiz.id%>/answer">
+		  <p class="titleGigant">Pregunta: <%= quiz.pregunta %></p>
 			<input type="text" name="respuesta" placeholder="Responda aquí"/>
 			<br/>
 			<input type="submit" value="Enviar"/>

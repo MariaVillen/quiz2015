@@ -4,76 +4,62 @@ html, body {height: auto;}
 body {
 	font-size: x-large; 
 	background: #333;
-	min-width: 320px;
-}
+	min-width: 320px;}
 
 
 h2 span, section h3 {
-	display: none;
-}
+	display: none;}
 
 header {min-height: 10%;}
 
 nav {min-height: 10%;}
 
 section {
-	height: 70%;
-}
+	height: 70%;}
 
 footer {
 	display: fixed;
 	bottom: 0px;
 	height: 10%;
-	text-align: center;
-}
+	text-align: center;}
 
 footer a {
 	font-size: 15px;
-	margin-right: 1em;
-}
+	margin-right: 1em;}
 
 input {
-	font-size: large;
-}
+	font-size: large;}
 
+
+.pannel-container {
+	height: auto;}
 
 .pannel {
 	padding:0;
-	padding-bottom: 2em;
-}
+	padding-bottom: 2em;}
 
 .pannel > div {
-	margin: auto 0;
-}
-
-.pannel-container {
-	height: auto;
-}
+	margin: auto 0;}
 
 .twoPannels div.pannel {
 	width: 100%;
-	min-height: 300px;
-}
+	min-height: 300px;}
 
 .iframe-pannel {
-	padding-top: 4rem;
-}
+	padding-top: 4rem;}
+
+.left {
+	float:none;}
+
+.right {
+	float:none;}
 
 .comment {
-	font-size: 16px;
-}
+	font-size: 16px;}
 
 .titleGigant {
 	margin-bottom: 10%;
-	font-size: 1em;
-}
-
-.left {
-	float:none;
-}
-.right {
-	float:none;
-}
+	font-size: 1em;}
 
 #preguntas form > p {
 	font-size: 1em;
