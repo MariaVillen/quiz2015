@@ -15,10 +15,10 @@ body {
 }
 
 a {	text-decoration: none;
-	color: #666;
+	color: #444;
 }
 
-a:hover {color: #888;}
+a:hover {color: #999;}
 
 section > div {padding: 20px;}
 
@@ -30,14 +30,17 @@ header, nav, section, footer {
 
 header {display: table;
 width: 100%;
+height: 10%;
 vertical-align: middle;
 text-align: center;}
 
+nav {height: 10%;}
+
 section {
-height: 60%;}
+height: 70%;}
 
 footer {
-	height: 19%;
+	height: 10%;
 	min-height: 60px;
 	text-align: right;
 }
@@ -54,12 +57,13 @@ nav span {
 	margin: 0px 10px 0px 0px;
 }
 
+table {text-align: left}
 
 #page-wrap	{ 
+	height: 100%;
 	padding: 5px;
 	margin: 0 auto;
 	color: white;
-	height: 99.9%;
 	width: 99.9%;
 	margin-left: auto;
 	margin-right: auto;
@@ -73,12 +77,19 @@ nav span {
 
 }
 
+
 .pannel-container{
 	padding: 5px;
 	margin: 0 auto;
-	height: 100%;
 	width: 100%;
+	height: 100%;
 	}
+
+.clearfix {
+	overflow: hidden;
+	zoom:1;
+}
+
 
 .link-default {
 	margin: 1px;
@@ -93,7 +104,7 @@ nav span {
 }
 
 .link-default a:hover {
-color: #fff;
+color: #999;
 }
 
 .link-light {
@@ -160,6 +171,8 @@ color: #fff;
 .pannel > div {
 	display:table-cell;
 	vertical-align: middle;
+	height: 100%;
+	width: 100%;
 }
 
 .iframe-pannel {
@@ -178,6 +191,7 @@ color: #fff;
 
 .twoPannels div.pannel {
 	width: 50%;
+	height: 100%;
 }
 
 
@@ -197,6 +211,9 @@ color: #fff;
 	height: 10em;
 	background: transparent url("../images/LogoQuiz.png") no-repeat scroll 0% 0% /cover;
 }
+
+#index form {text-align: left;
+	margin-bottom: 1em;}
 
 ::-webkit-input-placeholder {
    text-align: center;
