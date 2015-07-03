@@ -1,3 +1,3 @@
-$ cat .gitignore
+node_modules
 quiz.sqlite
 .env
