@@ -14,11 +14,11 @@ body {
 	font:16px "Roboto", arial, sans-serif;
 }
 
-a {
-	text-decoration: none;
+a {	text-decoration: none;
 	color: #666;
 }
 
+a:hover {color: #888;}
 
 section > div {padding: 20px;}
 
