@@ -19,10 +19,9 @@ exports.index = function( req, res){
 
 	if(req.query.search){
 		var search = '%' + req.query.search.replace(/\s/gi, "%") + '%';
-		console.log(search);
 	} else {var search = '%';}
 	
-	models.Quiz.findAll({where: ["pregunta like ?", search]}).then(function(quizes) {
+	models.Quiz.findAll({where: ["lower(pregunta) like lower(?)", search], order: 'pregunta ASC'}).then(function(quizes) {
 		res.render('quizes/index', {quizes: quizes});
 	}).catch(function(error) {next(error);});
 };
@@ -38,7 +37,7 @@ exports.show = function(req, res){
 exports.answer = function(req, res){
 	var resultado = 'Incorrecto';
 	//models.Quiz.find(req.params.quizId).then(function(quiz){
-		if (req.query.respuesta === req.quiz.respuesta){
+		if (req.query.respuesta.toLowerCase() === req.quiz.respuesta.toLowerCase()){
 			resultado = "Correcto";}
 		res.render('quizes/answer', {quiz: req.quiz, respuesta: resultado});
 };
