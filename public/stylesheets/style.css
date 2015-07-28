@@ -115,6 +115,20 @@ color: #999;
 	padding: 5px;
 }
 
+.navBar {
+	text-align: left;
+	padding: 0.5em 1em 0.5em 0;
+	border-bottom: 1px solid #999;
+	padding-bottom: 1em;
+}
+
+.navBar div, .navBar a, .navBar form {display: inline; margin-right: 1em;}
+
+table {background: white;
+width: 100%;
+height: 80%;
+padding: 1em;}
+
 .left {
 	float:left;
 }

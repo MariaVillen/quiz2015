@@ -21,6 +21,8 @@ router.get('/quizes', quizController.index);//Added Chapter 7.4
 //router.get('/quizes/answer', quizController.answer);//Added in Chapter 6.5
 router.get('/quizes/:quizId(\\d+)', quizController.show);//Added in Chapter 7.4 
 router.get('/quizes/:quizId(\\d+)/answer', quizController.answer);//Added in Chapter 7.4
+router.get('/quizes/new', quizController.new);
+router.post('/quizes/create', quizController.create);
 
 router.get('/author', function(req, res){
 	res.render('author');});
