@@ -77,6 +77,10 @@ table {text-align: left}
 
 }
 
+#ErrorMsgs {
+	color: red;
+}
+
 
 .pannel-container{
 	padding: 5px;

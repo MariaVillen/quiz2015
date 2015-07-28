@@ -22,7 +22,7 @@ exports.index = function( req, res){
 	} else {var search = '%';}
 	
 	models.Quiz.findAll({where: ["lower(pregunta) like lower(?)", search], order: 'pregunta ASC'}).then(function(quizes) {
-		res.render('quizes/index', {quizes: quizes});
+		res.render('quizes/index', {quizes: quizes, errors: []});
 	}).catch(function(error) {next(error);});
 };
 
@@ -31,7 +31,7 @@ exports.new = function(req, res){
 	var quiz = models.Quiz.build(
 		{pregunta: "Pregunta", respuesta: "Respuesta"}
 		);
-	res.render('quizes/new', {quiz: quiz});
+	res.render('quizes/new', {quiz: quiz, errors: []});
 };
 
 // POST /quizes/create
@@ -58,7 +58,7 @@ exports.create = function(req, res) {
 // GET /quizes/question
 exports.show = function(req, res){
 	//models.Quiz.find(req.params.quizId).then(function(quiz){
-		res.render('quizes/show', {quiz: req.quiz});
+		res.render('quizes/show', {quiz: req.quiz, errors: []});
 	//})
 };
 
@@ -68,6 +68,6 @@ exports.answer = function(req, res){
 	//models.Quiz.find(req.params.quizId).then(function(quiz){
 		if (req.query.respuesta.toLowerCase() === req.quiz.respuesta.toLowerCase()){
 			resultado = "Correcto";}
-		res.render('quizes/answer', {quiz: req.quiz, respuesta: resultado});
+		res.render('quizes/answer', {quiz: req.quiz, respuesta: resultado, errors: []});
 };
 
