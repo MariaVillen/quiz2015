@@ -41,13 +41,13 @@ sequelize.sync().then(function(){
 		Quiz.count().then(function(count){
 			if (count === 0){ //la tabla se inicializa solo si está vacía.
 				Quiz.create({ pregunta: "Capital de Italia",
-											respuesta: "Roma"});
+											respuesta: "Roma", categoria: "Humanidades"});
 				Quiz.create({ pregunta: "Capital de Portugal",
-											respuesta: "Lisboa"});
-				Quiz.create({ pregunta: "Señora en francés",
-											respuesta: "Madame"});
+											respuesta: "Lisboa", categoria: "Humanidades"});
+				Quiz.create({ pregunta: "Capital de Francia",
+											respuesta: "Paris", categoria: "Humanidades"});
 				Quiz.create({ pregunta: "Año de la Toma de la Bastilla",
-											respuesta: "1789"})
+											respuesta: "1789", categoria: "Humanidades"})
 				.then(function(){console.log('Base de datos inicializada')});
 			};
 		});
