@@ -23,9 +23,10 @@ router.get('/quizes/:quizId(\\d+)', quizController.show);//Added in Chapter 7.4
 router.get('/quizes/:quizId(\\d+)/answer', quizController.answer);//Added in Chapter 7.4
 router.get('/quizes/new', quizController.new);
 router.post('/quizes/create', quizController.create);
-
+router.get('/quizes/:quizId(\\d+)/edit', quizController.edit);//Added in Chapter 8
 router.get('/author', function(req, res){
 	res.render('author', {errors: []});});
-
+router.put('/quizes/:quizId(\\d+)', quizController.update);
+router.delete('/quizes/:quizId(\\d+)', quizController.destroy);
 
 module.exports = router;

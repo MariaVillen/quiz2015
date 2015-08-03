@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var routes = require('./routes/index');//importa el enrutador (chapter 6.5)
 var partials = require('express-partials'); //agregamos express partials para vistas parciales (chapter 6.6)
-
+var methodOverride = require('method-override');
 var app = express();
 
 // view engine setup
@@ -20,6 +20,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(methodOverride('_method'));//agregado en chapter 6.6
 app.use(partials());//agregado en chapter 6.6
 
 //instala el enrutador

@@ -63,6 +63,12 @@ exports.show = function(req, res){
 };
 
 // GET /quizes/answer
+exports.edit = function(req, res){
+	var quiz = req.quiz;
+	res.render('quizes/edit', {quiz: quiz, errors: []});
+};
+
+// GET /quizes/answer
 exports.answer = function(req, res){
 	var resultado = 'Incorrecto';
 	//models.Quiz.find(req.params.quizId).then(function(quiz){
@@ -71,3 +77,28 @@ exports.answer = function(req, res){
 		res.render('quizes/answer', {quiz: req.quiz, respuesta: resultado, errors: []});
 };
 
+// PUT /quizes/:id
+exports.update = function (req, res) {
+	req.quiz.pregunta = req.body.quiz.pregunta;
+	req.quiz.respuesta = req.body.quiz.respuesta;
+
+	req.quiz
+	.validate()
+	.then(
+		function(err){
+			if(err) {
+				res.render('quizes/edit', {quiz: req.quiz, errors: err.errors});
+			} else {
+				req.quiz
+				.save({fields: ["pregunta","respuesta"]})
+				.then( function(){res.redirect('/quizes');});
+			}
+		}
+		)};
+
+// DELETE /quizes/:id
+exports.destroy = function(req,res){
+	req.quiz.destroy().then( function(){
+		res.redirect('/quizes');
+	}).catch(function(error){next(error)});
+};
